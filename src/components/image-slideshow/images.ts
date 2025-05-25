@@ -1,17 +1,27 @@
-import burgerImg from "@/assets/burger.jpg";
-import curryImg from "@/assets/curry.jpg";
-import dumplingsImg from "@/assets/dumplings.jpg";
-import macncheeseImg from "@/assets/macncheese.jpg";
-import pizzaImg from "@/assets/pizza.jpg";
-import schnitzelImg from "@/assets/schnitzel.jpg";
-import tomatoSaladImg from "@/assets/tomato-salad.jpg";
+import burger from "@/assets/burger.jpg";
+import curry from "@/assets/curry.jpg";
+import dumplings from "@/assets/dumplings.jpg";
+import macncheese from "@/assets/macncheese.jpg";
+import pizza from "@/assets/pizza.jpg";
+import schnitzel from "@/assets/schnitzel.jpg";
+import tomatoSalad from "@/assets/tomato-salad.jpg";
 
 export const imagesForSlideshow = [
-  { image: burgerImg, alt: "A delicious, juicy burger" },
-  { image: curryImg, alt: "A delicious, spicy curry" },
-  { image: dumplingsImg, alt: "Steamed dumplings" },
-  { image: macncheeseImg, alt: "Mac and cheese" },
-  { image: pizzaImg, alt: "A delicious pizza" },
-  { image: schnitzelImg, alt: "A delicious schnitzel" },
-  { image: tomatoSaladImg, alt: "A delicious tomato salad" },
+  { image: burger, alt: "A delicious, juicy burger" },
+  { image: curry, alt: "A delicious, spicy curry" },
+  { image: dumplings, alt: "Steamed dumplings" },
+  { image: macncheese, alt: "Mac and cheese" },
+  { image: pizza, alt: "A delicious pizza" },
+  { image: schnitzel, alt: "A delicious schnitzel" },
+  { image: tomatoSalad, alt: "A delicious tomato salad" },
 ];
+
+export const images = {
+  burger,
+  curry,
+  dumplings,
+  macncheese,
+  pizza,
+  schnitzel,
+  ["tomato-salad"]: tomatoSalad,
+};
