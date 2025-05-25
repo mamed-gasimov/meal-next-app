@@ -1,3 +1,4 @@
+import fs from "fs";
 import sql from "better-sqlite3";
 import slugify from "slugify";
 import xss from "xss";
@@ -25,7 +26,12 @@ export async function saveMeal(meal) {
   const fileName = `${meal.slug}.${extension}`;
 
   const bufferedImage = await meal.image.arrayBuffer();
-  console.log({ bufferedImage });
+  const stream = fs.createWriteStream(`public/images/${fileName}`);
+  stream.write(Buffer.from(bufferedImage), (err) => {
+    if (err) {
+      throw new Error("Saving image failed!");
+    }
+  });
 
   meal.image = fileName;
 
