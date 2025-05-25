@@ -8,3 +8,7 @@ export async function getMeals(): Promise<IMeal[]> {
 
   return db.prepare("SELECT * FROM meals").all() as IMeal[];
 }
+
+export function getMeal(slug: string): IMeal {
+  return db.prepare("SELECT * FROM meals WHERE slug = ?").get(slug) as IMeal;
+}

@@ -24,4 +24,4 @@ export const images = {
   pizza,
   schnitzel,
   ["tomato-salad"]: tomatoSalad,
-};
+} as const;
